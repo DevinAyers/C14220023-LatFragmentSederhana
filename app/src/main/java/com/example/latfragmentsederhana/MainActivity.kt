@@ -1,6 +1,7 @@
 package com.example.latfragmentsederhana
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,6 +22,16 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             replaceFragment(fSatu())
         }
+
+        val btnFragmentSatu = findViewById<Button>(R.id.btnFragmentSatu)
+        val btnFragmentDua = findViewById<Button>(R.id.btnFragmentDua)
+        btnFragmentSatu.setOnClickListener {
+            replaceFragment(fSatu())
+        }
+        btnFragmentDua.setOnClickListener {
+            replaceFragment(fDua())
+        }
+
     }
 
     private fun replaceFragment(fragment: Fragment) {
